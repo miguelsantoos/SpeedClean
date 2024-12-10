@@ -1,0 +1,27 @@
+2024-12-06 11:09:41.349570-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), telephone varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), telephone varchar(255), primary key (id)) [42001-232]
+2024-12-09 23:50:40.536179-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), telephone varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), telephone varchar(255), primary key (id)) [42001-232]
+2024-12-10 00:01:23.468686-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (email,name,password,telephone,id) values (?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into user (email,name,password,telephone,id) values (?,?,?,?,?) [42001-232]
+2024-12-10 00:20:38.756943-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]selec from * usuarrios"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+selec from * usuarrios [42001-232]
+2024-12-10 00:20:39.068944-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]selec from * usuarrios"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+selec from * usuarrios [42001-232]
+2024-12-10 00:21:14.097392-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select from [*]* usuarrios"; expected "identifier"; SQL statement:
+select from * usuarrios [42001-232]
+2024-12-10 00:22:43.213936-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARRIOS" not found; SQL statement:
+select * from usuarrios [42102-232]
+2024-12-10 00:22:46.632076-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]selec * from usuarrios"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+selec * from usuarrios [42001-232]
+2024-12-10 00:22:50.417419-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARRIOS" not found; SQL statement:
+select * from usuarrios [42102-232]
