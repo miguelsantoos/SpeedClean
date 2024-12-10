@@ -1,25 +1,27 @@
 package com.grupom.SpeedClean.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
-@Table
+@Table(name="usuarios")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
+    @Column(name="id")
     private Long id;
+    @Column(name="name")
     private String name;
+    @Column(name="email")
     private String email;
+    @Column(name="telephone")
     private String telephone;
+    @Column(name="password")
     private String password;
 }
