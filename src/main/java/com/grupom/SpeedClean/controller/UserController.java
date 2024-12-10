@@ -19,8 +19,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> save(@RequestBody User user) {
-        userService.saveUser(user);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return ResponseEntity.ok(userService.saveUser(user));
     }
 
     @GetMapping()
@@ -32,14 +31,15 @@ public class UserController {
     public ResponseEntity<User> buscarUser(@PathVariable Long id) {
         return ResponseEntity.ok(userService.buscarUser(id));
     }
-
+/*
     @PutMapping("/{Id}")
     public ResponseEntity<User> editarUser(@PathVariable Long id, @RequestBody User userAtualizado) {
         User userEditado = userService.editarUser(id, userAtualizado);
         return ResponseEntity.ok(userEditado);
     }
+ */
 
-    @DeleteMapping("/{Id}")
+    @DeleteMapping(path= {"/{Id}"})
     public ResponseEntity<User> deletar(@PathVariable Long id) {
         userService.deletar(id);
         return ResponseEntity.noContent().build();
