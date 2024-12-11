@@ -1,27 +1,70 @@
 package com.grupom.SpeedClean.model;
 
-import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.boot.autoconfigure.web.WebProperties;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name="usuarios")
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
 public class User {
 
     @Id
-    @GeneratedValue()
-    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="name")
+
     private String name;
-    @Column(name="email")
+
     private String email;
-    @Column(name="telephone")
+
     private String telephone;
-    @Column(name="password")
+
     private String password;
+
+    public User(Long id, String name, String email, String telephone, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.telephone = telephone;
+        this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

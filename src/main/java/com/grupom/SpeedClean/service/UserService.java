@@ -28,7 +28,7 @@ public class UserService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
-/*
+
     public User editarUser(Long id, User userAtualizado) {
         User userAntigo = repository.getById(id);
         userAntigo.setEmail(userAtualizado.getEmail());
@@ -37,6 +37,4 @@ public class UserService {
         userAntigo.setPassword(userAtualizado.getPassword());
         return repository.save(userAntigo);
     }
- */
-
 }
